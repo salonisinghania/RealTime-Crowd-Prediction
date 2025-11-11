@@ -15,7 +15,14 @@
 
 ## 📸 Sample Dashboard Preview
 
- 
+ ## 📸 Sample Dashboard Preview
+
+🖼️ **Smart City Crowd Monitoring Dashboard** – an AI-powered, real-time visualization of crowd density, air quality, and predictive alerts for urban safety and management.
+
+> *(Below is a sample look of the live dashboard interface showcasing map markers, KPIs, and predictive analytics.)*
+
+![Smart City Crowd Dashboard Sample](frontend/src/assets/sample_dashboard.png)
+
 
 ---
 
@@ -41,81 +48,107 @@ The **Smart City Crowd Monitoring Dashboard** empowers urban planners and emerge
 - **Visualization:** Map + KPI Cards + ChartJS (simplified)
 
 ---
-
 ## 🚀 Setup Instructions
 
-### 1️⃣ Clone the Repository
+### 🧩 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/<your-username>/Smart-City-Crowd-Dashboard.git
+cd Smart-City-Crowd-Dashboard
+````
 
-2️⃣ Backend Setup (Django)
+---
+
+### ⚙️ 2️⃣ Backend Setup (Django)
+
+```bash
 cd backend
 python -m venv venv
-venv\Scripts\activate  # for Windows
+venv\Scripts\activate   # (Windows)
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
+```
 
+🔹 **Runs on:** [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-🔹 Runs on → http://127.0.0.1:8000/
+---
 
-3️⃣ Frontend Setup (Angular)
+### 💻 3️⃣ Frontend Setup (Angular 12)
+
+```bash
 cd ../frontend
 npm install
 npx ng serve --open
+```
 
+🔹 **Opens on:** [http://localhost:4200/](http://localhost:4200/)
 
-🔹 Opens on → http://localhost:4200/
+---
 
-🔧 Environment Configuration
+### 🧾 Environment Configuration
 
-Create a .env file inside /backend:
+Create a `.env` file inside `/backend` and update your credentials:
 
+```bash
 DJANGO_SECRET_KEY=your_secret_key_here
 MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/
 MONGO_DB_NAME=crowd_db
 ALERT_THRESHOLD=350
+```
 
-🧭 How It Works
+---
 
-Backend API (Django) fetches live or simulated data from MongoDB.
+## 🧭 How It Works
 
-Frontend (Angular) polls every 30 seconds for new updates.
+1. **Django REST API** fetches and serves live or simulated crowd + AQI data.
+2. **Angular frontend** polls every 30 seconds for real-time updates.
+3. Data visualizations include:
 
-Data points are visualized as:
+   * 🟢 Normal zones (low density)
+   * 🔴 Alert zones (high crowd or poor air quality)
+4. **AI Prediction Engine** forecasts next-hour crowd and AQI trends.
 
-🟢 Normal zones (low density)
+---
 
-🔴 Alert zones (high density or poor AQI)
+## 🔮 Example Prediction Response
 
-AI predictions show expected next-hour trends.
-
-🔮 Example Prediction Response
+```json
 {
   "predicted_count": 482,
   "predicted_aqi": 156,
   "alert_expected": true
 }
+```
 
-🧠 Future Improvements
+---
 
-IoT sensor integration for live feeds
+## 🧠 Future Enhancements
 
-Predictive heat-map visualization
+* 📡 IoT sensor integration for live data streams
+* 🗺️ Predictive heat-map visualization
+* 📧 Smart alert notifications (SMS / Email)
+* 🔐 Role-based admin analytics dashboard
 
-Alert notifications via SMS / Email
+---
 
-Role-based admin analytics panel
+## 👩‍💻 Contributor
 
-🧑‍💻 Contributors
+**Saloni Singhania** — *Full-Stack Developer | AI & ML Integration*
 
-Saloni Singhania — Full-Stack Developer | Machine Learning Integration
+---
+
+## ⚖️ License
+
+Licensed under the **MIT License** — free for personal and academic use.
+
+---
+
+## 🌟 Tags
+
+`angular` • `django` • `mongodb` • `ai` • `iot` • `dashboard` • `smart-city` • `python` • `data-visualization`
+
+```
+
+---
 
 
-⚖️ License
-
-This project is licensed under the MIT License – free to use and modify with attribution.
-
-🌟 GitHub Tags
-
-angular • django • mongodb • ai • iot • dashboard • smart-city • python • data-visualization
