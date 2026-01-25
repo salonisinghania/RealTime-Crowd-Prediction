@@ -12,6 +12,12 @@ The **Smart City Crowd Monitoring Dashboard** is a full-stack IoT-enabled web sy
 It simulates live IoT sensor feeds and updates MongoDB every **60 seconds**, visualizing the data through interactive maps, live charts, and alert panels.
 
 ---
+## 📸 Dashboard Preview
+
+<p align="center">
+  <img src="dashboard_preview.png" alt="Smart City Dashboard Preview" width="950"/>
+</p>
+
 
 ## 🚀 Features
 - 📊 **Real-time Data Updates** every 60 seconds via Python scripts.  
